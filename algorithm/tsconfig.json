@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "allowJs": false,
+    "strict": true,
+    "outDir": "build",
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
