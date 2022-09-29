@@ -7,7 +7,7 @@ import {Divider} from "@mui/material";
 import {theme} from './theme';
 import { MarketplaceHeaders } from './MarketplaceHeaders';
 import { MarketplaceAppBar } from './MarketplaceAppBar'
-import { MarketplaceCard } from './MarketplaceCard';
+import { GridMarketplaceCard } from './GridMarketplaceCard'
 
 export default function App() {
   return (
@@ -21,12 +21,12 @@ export default function App() {
           <Divider/>
 
           <Grid container spacing={2} justifyContent="flex-start">
-            <MarketplaceCard></MarketplaceCard>
-            <MarketplaceCard></MarketplaceCard>
-            <MarketplaceCard></MarketplaceCard>
-            <MarketplaceCard></MarketplaceCard>
-            <MarketplaceCard></MarketplaceCard>
-            <MarketplaceCard></MarketplaceCard>
+            <GridMarketplaceCard></GridMarketplaceCard>
+            <GridMarketplaceCard></GridMarketplaceCard>
+            <GridMarketplaceCard></GridMarketplaceCard>
+            <GridMarketplaceCard></GridMarketplaceCard>
+            <GridMarketplaceCard></GridMarketplaceCard>
+            <GridMarketplaceCard></GridMarketplaceCard>
           </Grid>
 
         </Container>
