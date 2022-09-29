@@ -4,9 +4,12 @@ import {coOccurencesCounter, Inventory} from "./co_occurences_counter";
 describe('coOccurences testing', () => {
     it('empty input returns empty array', () => {
         const input: Inventory[] = []
-        const results = coOccurencesCounter(input)
+        const reference = {trait_type: "weapon", value:"gun"}
+        const expected = {}
 
-        expect(results).to.be.deep.eq({},
+        const results = coOccurencesCounter(input, reference)
+
+        expect(results).to.be.deep.eq(expected,
             `For an empty input, coOccurences should return an empty object. Got ${results}`)
     })
     it('Normal use case with small set of data', () => {
@@ -46,14 +49,14 @@ describe('coOccurences testing', () => {
                 }
             ],
         ]
+        const reference = {trait_type: "weapon", value:"gun"}
         const expected = {
             "armor:leather":2,
-            "weapon:gun":3,
             "armor:steel":1,
             "medal:of honor":1
         }
 
-        const results = coOccurencesCounter(input)
+        const results = coOccurencesCounter(input, reference)
 
         expect(results).to.be.deep.eq(expected)
     })
