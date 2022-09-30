@@ -1,11 +1,18 @@
 import Grid from "@mui/material/Grid";
-import {MarketplaceCard} from "./MarketplaceCard";
+import {MarketplaceCard, MarketplaceCardProps} from "./MarketplaceCard";
 import * as React from "react";
 
-export function GridMarketplaceCard() {
+export interface GridMarketplaceCardProps extends MarketplaceCardProps{
+  xs: number;
+  sm: number;
+  md: number;
+  xl: number;
+}
+
+export function GridMarketplaceCard(props : GridMarketplaceCardProps) {
   return (
-    <Grid item xs={12} sm={6} md={3} xl={2}>
-      <MarketplaceCard></MarketplaceCard>
+    <Grid item xs={props.xs} sm={props.sm} md={props.md} xl={props.xl}>
+      <MarketplaceCard kind={props.kind} thumbnail={props.thumbnail}></MarketplaceCard>
     </Grid>
   )
 }

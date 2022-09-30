@@ -20,7 +20,7 @@ export const theme = createTheme({
     MuiDivider: {
       styleOverrides:{
         root: {
-          backgroundColor: "#AAAAAA"
+          backgroundColor: "#222222"
         }
       }
     },
@@ -32,13 +32,11 @@ export const theme = createTheme({
           },
           "&:hover .hidden-button": {
             visibility: "visible",
+          },
+          ".erc1155": {
+            border: "1px solid #777777"
           }
         }
-      }
-    },
-    MuiButton: {
-      styleOverrides: {
-
       }
     },
     MuiAppBar: {

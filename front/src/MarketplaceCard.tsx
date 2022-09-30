@@ -6,12 +6,17 @@ import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import * as React from "react";
 
-export function MarketplaceCard() {
+export interface MarketplaceCardProps {
+  kind: string;
+  thumbnail: string;
+}
+
+export function MarketplaceCard(props: MarketplaceCardProps) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} className={props.kind}>
       <CardMedia
         component="img"
-        image="https://robohash.org/xpuqubgagn.png?set=set1"
+        image={props.thumbnail}
         alt="random"
       />
       <CardContent>
